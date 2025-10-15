@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atölye Lingua — Çeviri Kolektifi</title>
+  <meta name="description" content="Fransız Dili ve Edebiyatı öğrencilerinden oluşan Atölye Lingua: akademik, teknik ve yaratıcı çeviri. Titiz, hızlı, şeffaf." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="data:," />
+  <script>
+    // basit mobil menü + yıl
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.nav-toggle');
+      toggle.addEventListener('click', () => header.classList.toggle('open'));
+      document.getElementById('y').textContent = new Date().getFullYear();
+    });
+  </script>
+</head>
+<body>
+  <!-- Üst şerit -->
+  <div class="top-band">Öğrenci Çeviri Kolektifi • FR ⇄ TR ⇄ EN</div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="#home" aria-label="Ana sayfa">
+        <span class="mark">A</span><span>tölye Lingua</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menüyü aç/kapat"><span></span><span></span></button>
+      <nav class="nav">
+        <a href="#home">Ana Sayfa</a>
+        <a href="#services">Hizmetler</a>
+        <a href="#pricing">Fiyatlar</a>
+        <a href="#about">Hakkımızda</a>
+        <a href="#contact" class="btn btn--primary">Teklif Al</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero container">
+      <div class="hero__copy">
+        <h1>Diller Arasında <em>İncelikli</em> Köprüler Kuruyoruz.</h1>
+        <p>Fransız Dili ve Edebiyatı öğrencilerinden oluşan bağımsız ekip. Akademik, teknik ve yaratıcı metinlerde
+          bağlama sadık, hedef kültüre doğal çeviriler üretiyoruz.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#contact">Metnini İnceleyelim</a>
+          <a class="btn btn--ghost" href="#services">Hizmetleri Gör</a>
+        </div>
+        <ul class="hero__meta">
+          <li><code>Terminoloji • Glosary</code></li>
+          <li><code>Çift Kontrol • Redaksiyon</code></li>
+          <li><code>Şeffaf Süreç</code></li>
+        </ul>
+      </div>
+      <div class="hero__aside">
+        <div class="note-card">
+          <h3>Son Teslim</h3>
+          <p>Makale özeti (FR→TR) <span class="dot"></span> <strong>36 saatte</strong></p>
+        </div>
+        <div class="note-card">
+          <h3>Kalite Notu</h3>
+          <p>Stil kılavuzu + terminoloji listesi proje başında oluşturulur.</p>
+        </div>
+        <div class="stamp">Édition</div>
+      </div>
+    </section>
+
+    <!-- Ayraç -->
+    <div class="divider">
+      <div class="diagonal"></div>
+    </div>
+
+    <!-- Hizmetler (tamamen farklı: 3 sütun ızgara + çizgili başlıklar) -->
+    <section id="services" class="section container">
+      <header class="section__head">
+        <h2>Ne Yapıyoruz?</h2>
+        <p>Dört alan, tek yaklaşım: bağlamı anlamak, üslubu taşımak, tutarlılığı korumak.</p>
+      </header>
+
+      <div class="grid grid--services">
+        <article class="svc">
+          <header><span class="tag">01</span><h3>Belge Çevirisi</h3></header>
+          <p>Sözleşmeler, raporlar, özgeçmişler, broşürler ve resmi yazışmalar.</p>
+          <ul>
+            <li>PDF / DOCX / PPT</li>
+            <li>Gizlilik (NDA)</li>
+            <li>Teslim: 24–72 saat</li>
+          </ul>
+        </article>
+
+        <article class="svc">
+          <header><span class="tag">02</span><h3>Akademik</h3></header>
+          <p>Makaleler, özetler, bildiri ve tez bölümleri—yayın standartlarına uygun.</p>
+          <ul>
+            <li>APA / MLA / Chicago</li>
+            <li>Benzerlik risk notları</li>
+            <li>Alan editörüyle gözden geçirme</li>
+          </ul>
+        </article>
+
+        <article class="svc">
+          <header><span class="tag">03</span><h3>Teknik</h3></header>
+          <p>Arayüz metinleri, kılavuzlar, ürün veri sayfaları, destek içerikleri.</p>
+          <ul>
+            <li>Terminoloji glosary</li>
+            <li>Çok dilli yerelleştirme</li>
+            <li>UI string bağlam notları</li>
+          </ul>
+        </article>
+
+        <article class="svc">
+          <header><span class="tag">04</span><h3>Web & Yerelleştirme</h3></header>
+          <p>SEO odaklı içerik, mikro kopya, çağrı metinleri; FR/EN ⇄ TR doğal anlatım.</p>
+          <ul>
+            <li>SEO başlık & açıklama</li>
+            <li>Ton & üslup kılavuzu</li>
+            <li>A/B test önerileri</li>
+          </ul>
+        </article>
+
+        <article class="svc svc--highlight">
+          <header><span class="tag">05</span><h3>Redaksiyon & Düzeltme</h3></header>
+          <p>Var olan çevirilerin akıcılık, doğruluk, tutarlılık ve yazım denetimi.</p>
+          <ul>
+            <li>Ön/son kontrol raporu</li>
+            <li>Biçem rehberi çıkarımı</li>
+            <li>Terminoloji haritası</li>
+          </ul>
+        </article>
+
+        <article class="svc">
+          <header><span class="tag">06</span><h3>Danışmanlık</h3></header>
+          <p>Yayın, tez ve başvuru metinleri için dilsel strateji & son okuma.</p>
+          <ul>
+            <li>Örnek paragraf cilası</li>
+            <li>Kapsamlama oturumu</li>
+            <li>Teslim planı</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Ayraç -->
+    <div class="divider divider--soft">
+      <div class="dots"></div>
+    </div>
+
+    <!-- Fiyatlar (kartlar + ince çizgi kenarlık) -->
+    <section id="pricing" class="section container">
+      <header class="section__head">
+        <h2>Fiyatlandırma</h2>
+        <p>Şeffaf, öğrenci dostu ve işin kapsamına göre esnek.</p>
+      </header>
+
+      <div class="grid grid--pricing">
+        <article class="price">
+          <h3>Başlangıç</h3>
+          <p class="lead">Genel içerikler</p>
+          <p class="money">₺0,60 <span>/ kelime</span></p>
+          <ul>
+            <li>48–72 saat teslim</li>
+            <li>Temel redaksiyon</li>
+            <li>E-posta desteği</li>
+          </ul>
+          <a class="btn btn--ghost" href="#contact">Teklif Al</a>
+        </article>
+
+        <article class="price price--pop">
+          <div class="ribbon">En Popüler</div>
+          <h3>Profesyonel</h3>
+          <p class="lead">Akademik & teknik</p>
+          <p class="money">₺0,95 <span>/ kelime</span></p>
+          <ul>
+            <li>Terminoloji yönetimi</li>
+            <li>2 tur edit + kalite</li>
+            <li>Öncelikli teslim</li>
+          </ul>
+          <a class="btn btn--primary" href="#contact">Projeyi Başlat</a>
+        </article>
+
+        <article class="price">
+          <h3>Kurumsal</h3>
+          <p class="lead">Hacimli/çok dilli</p>
+          <p class="money">Proje Bazlı <span>/ teklif</span></p>
+          <ul>
+            <li>Glosary & stil rehberi</li>
+            <li>CMS/SDK entegrasyonu</li>
+            <li>7/24 proje sorumlusu</li>
+          </ul>
+          <a class="btn btn--ghost" href="#contact">Toplantı Planla</a>
+        </article>
+      </div>
+      <p class="micro-note">Not: Metnin alanı, biçimi ve aciliyetine göre fiyat değişebilir.</p>
+    </section>
+
+    <!-- Hakkımızda (iki kolon: manifesto + sayılar) -->
+    <section id="about" class="section container">
+      <header class="section__head">
+        <h2>Biz Kimiz?</h2>
+        <p>Öğrenen, üreten, birbirini yükselten bir ekip.</p>
+      </header>
+
+      <div class="about">
+        <article class="paper">
+          <h3>Manifesto</h3>
+          <p>Dili sadece aktarmıyoruz; metnin niyetini, ritmini ve nefesini de taşıyoruz. Kaynağa saygı, hedefe doğallık; her projede ölçümüz bu.</p>
+          <ul class="check">
+            <li>Netlik incelikten doğar</li>
+            <li>Terminoloji kutsaldır</li>
+            <li>Geri bildirim büyütür</li>
+            <li>Kalite ölçülür</li>
+          </ul>
+        </article>
+
+        <aside class="numbers">
+          <div><b>70+</b><span>tamamlanan iş</span></div>
+          <div><b>A+</b><span>doğruluk & stil</span></div>
+          <div><b>4</b><span>dil kombinasyonu</span></div>
+          <div><b>5★</b><span>geribildirim</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- İletişim (form + ince sütun kartları) -->
+    <section id="contact" class="section container">
+      <header class="section__head">
+        <h2>Birlikte Çalışalım</h2>
+        <p>Kısa bir özet gönder—en uygun yol haritası ve süreyle dönelim.</p>
+      </header>
+
+      <div class="contact">
+        <form class="form" onsubmit="event.preventDefault(); alert('Teşekkürler! En kısa sürede dönüş yapacağız.'); this.reset();">
+          <div class="row">
+            <label>Ad Soyad<input type="text" required placeholder="Adın Soyadın"></label>
+            <label>E-posta<input type="email" required placeholder="ornek@posta.com"></label>
+          </div>
+          <div class="row">
+            <label>Metin Türü
+              <select>
+                <option>Belge</option><option>Akademik</option><option>Teknik</option><option>Web/App</option><option>Redaksiyon</option>
+              </select>
+            </label>
+            <label>Tahmini Kelime<input type="number" min="0" placeholder="Örn. 1200"></label>
+          </div>
+          <label class="full">Mesaj / Bağlam
+            <textarea rows="5" placeholder="Kaynak/ hedef dil(ler), teslim tarihi ve özel notlar..."></textarea>
+          </label>
+          <button class="btn btn--primary" type="submit">Teklif İste</button>
+        </form>
+
+        <aside class="mini-cards">
+          <div class="mini">
+            <h4>İletişim</h4>
+            <p><a href="mailto:bonjour@atelierlingua.studio">bonjour@atelierlingua.studio</a><br>+90 555 000 00 00</p>
+          </div>
+          <div class="mini">
+            <h4>Müsaitlik</h4>
+            <p>Yeni proje başlangıcı: <strong>~1 hafta</strong></p>
+          </div>
+          <div class="mini">
+            <h4>Sosyal</h4>
+            <p><a href="#">LinkedIn</a> • <a href="#">GitHub</a> • <a href="#">Behance</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot-row">
+      <p>© <span id="y"></span> Atölye Lingua — “Metin, hedef dilde yeniden doğar.”</p>
+      <a class="to-top" href="#home" aria-label="Yukarı dön">↑</a>
+    </div>
+  </footer>
+</body>
+</html>
