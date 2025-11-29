@@ -196,3 +196,100 @@ textarea{ resize:vertical }
 
 /* Erişilebilirlik / hareket azaltma */
 @media (prefers-reduced-motion: reduce){ *{ transition:none !important; animation:none !important } }
+
+
+/* logo placement */
+.site-logo {
+  height: 150px;
+  width: auto;
+  display: block;
+}
+
+.footer-logo {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
+/* responsive logo scaling */
+@media (max-width: 600px) {
+  .site-logo {
+    height: 32px;
+  }
+  .footer-logo {
+    height: 30px;
+  }
+}
+
+/* keep existing styling (no layout change) */
+.top-band {
+  background: #111;
+  color: white;
+  font-size: 0.9rem;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.site-header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+.nav a {
+  margin: 0 10px;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav a.btn--primary {
+  background: #0077ff;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+}
+
+.nav-toggle span {
+  width: 20px;
+  height: 2px;
+  background: #333;
+}
+
+/* footer layout */
+.site-footer {
+  background: #f7f7f7;
+  color: #333;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.site-footer .foot-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.to-top {
+  text-decoration: none;
+  color: #0077ff;
+  font-weight: bold;
+}
