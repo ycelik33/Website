@@ -200,7 +200,7 @@ textarea{ resize:vertical }
 
 /* logo placement */
 .site-logo {
-  height: 48px;
+  height: 65px;
   width: auto;
   display: block;
 }
@@ -293,4 +293,5 @@ textarea{ resize:vertical }
   color: #0077ff;
   font-weight: bold;
 }
+
 
