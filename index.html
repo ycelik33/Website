@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="index.css" />
   <link rel="icon" href="data:," />
   <script>
-    // basit mobil menü + yıl
     document.addEventListener('DOMContentLoaded', () => {
       const header = document.querySelector('.site-header');
       const toggle = document.querySelector('.nav-toggle');
@@ -21,13 +20,10 @@
   </script>
 </head>
 <body>
-  <!-- Üst şerit -->
   <div class="top-band">Öğrenci Çeviri Kolektifi • FR ⇄ TR ⇄ EN</div>
 
-  <!-- Header -->
   <header class="site-header">
     <div class="container nav-row">
-      <!-- replaced text brand with logo -->
       <a class="brand" href="#home" aria-label="Ana sayfa">
         <img src="logo1.png" alt="Glottis Translate Logo" class="site-logo">
       </a>
@@ -43,7 +39,6 @@
   </header>
 
   <main>
-    <!-- Hero -->
     <section id="home" class="hero container">
       <div class="hero__copy">
         <h1>Diller Arasında <em>İncelikli</em> Köprüler Kuruyoruz.</h1>
@@ -81,7 +76,6 @@
       </header>
 
       <div class="grid grid--services">
-        <!-- service cards unchanged -->
         <article class="svc">
           <header><span class="tag">01</span><h3>Belge Çevirisi</h3></header>
           <p>Sözleşmeler, raporlar, özgeçmişler, broşürler ve resmi yazışmalar.</p>
@@ -139,52 +133,6 @@
 
     <div class="divider divider--soft"><div class="dots"></div></div>
 
-    <!-- <section id="pricing" class="section container"> -->
-      <!-- <header class="section__head"> -->
-        <!-- <h2>Fiyatlandırma</h2> -->
-        <!-- <p>Şeffaf, öğrenci dostu ve işin kapsamına göre esnek.</p> -->
-      <!-- </header> -->
-
-      <!-- <div class="grid grid--pricing"> -->
-        <!-- pricing cards unchanged -->
-        <!-- <article class="price"> -->
-          <!-- <h3>Başlangıç</h3> -->
-          <!-- <p class="lead">Genel içerikler</p> -->
-          <!-- <p class="money">₺0,60 <span>/ kelime</span></p> -->
-          <!-- <ul> -->
-            <!-- <li>48–72 saat teslim</li> -->
-            <!-- <li>Temel redaksiyon</li> -->
-            <!-- <li>E-posta desteği</li> -->
-          <!-- </ul> -->
-          <!-- <a class="btn btn--ghost" href="#contact">Teklif Al</a> -->
-        <!-- </article> -->
-        <!-- <article class="price price--pop"> -->
-          <!-- <div class="ribbon">En Popüler</div> -->
-          <!-- <h3>Profesyonel</h3> -->
-          <!-- <p class="lead">Akademik & teknik</p> -->
-          <!-- <p class="money">₺0,95 <span>/ kelime</span></p> -->
-          <!-- <ul> -->
-            <!-- <li>Terminoloji yönetimi</li> -->
-            <!-- <li>2 tur edit + kalite</li> -->
-            <!-- <li>Öncelikli teslim</li> -->
-          <!-- </ul> -->
-          <!-- <a class="btn btn--primary" href="#contact">Projeyi Başlat</a> -->
-        <!-- </article> -->
-        <!-- <article class="price"> -->
-          <!-- <h3>Kurumsal</h3> -->
-          <!-- <p class="lead">Hacimli/çok dilli</p> -->
-          <!-- <p class="money">Proje Bazlı <span>/ teklif</span></p> -->
-          <!-- <ul> -->
-            <!-- <li>Glosary & stil rehberi</li> -->
-            <!-- <li>CMS/SDK entegrasyonu</li> -->
-            <!-- <li>7/24 proje sorumlusu</li> -->
-          <!-- </ul> -->
-          <!-- <a class="btn btn--ghost" href="#contact">Toplantı Planla</a> -->
-        <!-- </article> -->
-      <!-- </div> -->
-      <!-- <p class="micro-note">Not: Metnin alanı, biçimi ve aciliyetine göre fiyat değişebilir.</p> -->
-    <!-- </section> -->
-
     <section id="about" class="section container">
       <header class="section__head">
         <h2>Biz Kimiz?</h2>
@@ -210,30 +158,12 @@ Kelimeleri değil, metnin bütün ruhuna karşı dile adilce taşımayı görev 
     <section id="contact" class="section container">
       <header class="section__head">
         <h2>Birlikte Çalışalım</h2>
-        <p>	
-			Gerekli bilgileri giriniz ve belgeyi gönderiniz, İnceledikten sonra en kısa sürede dönüş yapılacaktır.
-		</p>
+        <p>Gerekli bilgileri giriniz ve belgeyi gönderiniz, İnceledikten sonra en kısa sürede dönüş yapılacaktır.</p>
       </header>
 
       <div class="contact">
-        <form class="form" onsubmit="event.preventDefault(); alert('Teşekkürler! En kısa sürede dönüş yapacağız.'); this.reset();">
-          <div class="row">
-            <label>Ad Soyad<input type="text" required placeholder="Adın Soyadın"></label>
-            <label>E-posta<input type="email" required placeholder="ornek@posta.com"></label>
-          </div>
-          <div class="row">
-            <label>Metin Türü
-              <select>
-                <option>Belge</option><option>Akademik</option><option>Teknik</option><option>Web/App</option><option>Redaksiyon</option>
-              </select>
-            </label>
-            <label>Tahmini Kelime<input type="number" min="0" placeholder="Örn. 1200"></label>
-          </div>
-          <label class="full">Mesaj / Bağlam
-            <textarea rows="5" placeholder="Kaynak/ hedef dil(ler), teslim tarihi ve özel notlar..."></textarea>
-          </label>
-          <button class="btn btn--primary" type="submit">Teklif İste</button>
-        </form>
+
+        <!-- FORM REMOVED -->
 
         <aside class="mini-cards">
           <div class="mini">
@@ -246,21 +176,21 @@ Kelimeleri değil, metnin bütün ruhuna karşı dile adilce taşımayı görev 
           </div>
           <div class="mini">
             <h4>Sosyal</h4>
-            <p><a href="https://www.instagram.com/glottistranslate">Instagram</a> </p>
+            <p><a href="https://www.instagram.com/glottistranslate">Instagram</a></p>
           </div>
         </aside>
+
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container foot-row">
-      <!-- added logo to footer -->
       <img src="logo1.png" alt="Atölye Lingua Logo" class="footer-logo">
       <p>© <span id="y"></span> Glottis Translate — “Metin, hedef dilde yeniden doğar.”</p>
       <a class="to-top" href="#home" aria-label="Yukarı dön">↑</a>
     </div>
   </footer>
+
 </body>
 </html>
-
