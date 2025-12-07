@@ -200,7 +200,7 @@ textarea{ resize:vertical }
 
 /* logo placement */
 .site-logo {
-  height: 150px;
+  height: 48px;
   width: auto;
   display: block;
 }
@@ -242,7 +242,7 @@ textarea{ resize:vertical }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 25px;
+  padding: 6px 20px;
 }
 
 .nav a {
@@ -293,3 +293,4 @@ textarea{ resize:vertical }
   color: #0077ff;
   font-weight: bold;
 }
+
