@@ -294,4 +294,63 @@ textarea{ resize:vertical }
   font-weight: bold;
 }
 
+/* =========================================================
+   MOBILE-ONLY PATCH (NO DESIGN CHANGE ON DESKTOP)
+   Appended at the end so it only affects mobile behavior.
+   ========================================================= */
 
+/* Stop accidental sideways scrolling on phones */
+html, body { overflow-x: hidden; }
+
+/* Make anchor jumps not hide under sticky header (mobile/desktop safe) */
+section { scroll-margin-top: 90px; }
+
+@media (max-width: 900px) {
+  /* Your bottom block disables nav-toggle; re-enable ONLY on mobile */
+  .nav-toggle{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  /* Ensure the mobile menu can scroll and doesn't run off screen */
+  .nav{
+    max-height: calc(100vh - 70px);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Bigger tap target (mobile only) */
+  .nav a{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Hero CTA buttons stack on small screens (prevents overflow) */
+  .hero__cta{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero__cta .btn{
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Prevent meta pills from forcing overflow */
+  .hero__meta code{
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* Footer stacks cleanly on phones */
+  .site-footer .foot-row{
+    flex-direction: column;
+    gap: 10px;
+  }
+}
