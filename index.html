@@ -3,23 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Glottis Translate — Çeviri Kolektifi</title>
   <meta name="description" content="Fransız Dili ve Edebiyatı öğrencilerinden oluşan Atölye Lingua: akademik, teknik ve yaratıcı çeviri. Titiz, hızlı, şeffaf." />
+
+  <!-- SEO (no visual impact) -->
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://glottistranslate.com/" />
+
+  <!-- Social (no visual impact) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:site_name" content="Glottis Translate" />
+  <meta property="og:title" content="Glottis Translate — Çeviri Kolektifi" />
+  <meta property="og:description" content="FR ⇄ TR ⇄ EN çeviri kolektifi: akademik, teknik ve yaratıcı çeviri. Titiz, hızlı, şeffaf." />
+  <meta property="og:url" content="https://glottistranslate.com/" />
+  <meta property="og:image" content="https://glottistranslate.com/logo1.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Glottis Translate — Çeviri Kolektifi" />
+  <meta name="twitter:description" content="FR ⇄ TR ⇄ EN çeviri kolektifi: akademik, teknik ve yaratıcı çeviri." />
+  <meta name="twitter:image" content="https://glottistranslate.com/logo1.png" />
+
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="index.css" />
+
+  <!-- Icons -->
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/logo1.png" />
+  <link rel="apple-touch-icon" href="/logo1.png" />
+
+  <!-- Structured Data (no visual impact) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Glottis Translate",
+    "url":"https://glottistranslate.com/",
+    "logo":"https://glottistranslate.com/logo1.png",
+    "email":"info@glottistranslate.com",
+    "telephone":"+905340388390",
+    "sameAs":[
+      "https://www.instagram.com/glottistranslate"
+    ]
+  }
+  </script>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const header = document.querySelector('.site-header');
       const toggle = document.querySelector('.nav-toggle');
-      toggle.addEventListener('click', () => header.classList.toggle('open'));
+      const nav = document.getElementById('site-nav');
+
+      const setExpanded = (v) => toggle.setAttribute('aria-expanded', String(v));
+
+      toggle.addEventListener('click', () => {
+        const open = header.classList.toggle('open');
+        setExpanded(open);
+      });
+
+      // Mobile UX: close menu after clicking a link (no design change)
+      nav.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
+        if (!a) return;
+        header.classList.remove('open');
+        setExpanded(false);
+      });
+
       document.getElementById('y').textContent = new Date().getFullYear();
+      setExpanded(false);
     });
   </script>
 </head>
+
 <body>
   <div class="top-band">Öğrenci Çeviri Kolektifi • FR ⇄ TR ⇄ EN</div>
 
@@ -28,8 +90,13 @@
       <a class="brand" href="#home" aria-label="Ana sayfa">
         <img src="logo1.png" alt="Glottis Translate Logo" class="site-logo">
       </a>
-      <button class="nav-toggle" aria-label="Menüyü aç/kapat"><span></span><span></span></button>
-      <nav class="nav">
+
+      <!-- A11y-only attributes; no design change -->
+      <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-controls="site-nav" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <nav class="nav" id="site-nav">
         <a href="#home">Ana Sayfa</a>
         <a href="#services">Hizmetler</a>
         <a href="#about">Hakkımızda</a>
@@ -43,16 +110,19 @@
         <h1>Diller Arasında <em>İncelikli</em> Köprüler Kuruyoruz.</h1>
         <p>Fransız Dili ve Edebiyatı öğrencilerinden oluşan bağımsız ekip. Akademik, teknik ve yaratıcı metinlerde
           bağlama sadık, hedef kültüre doğal çeviriler üretiyoruz.</p>
+
         <div class="hero__cta">
           <a class="btn btn--primary" href="#contact">Metnini İnceleyelim</a>
           <a class="btn btn--ghost" href="#services">Hizmetleri Gör</a>
         </div>
+
         <ul class="hero__meta">
           <li><code>Terminoloji • Glosary</code></li>
           <li><code>Çift Kontrol • Redaksiyon</code></li>
           <li><code>Şeffaf Süreç</code></li>
         </ul>
       </div>
+
       <div class="hero__aside">
         <div class="note-card">
           <h3>Son Teslim</h3>
@@ -84,6 +154,7 @@
             <li>Hizli Teslim</li>
           </ul>
         </article>
+
         <article class="svc">
           <header><span class="tag">02</span><h3>Akademik</h3></header>
           <p>İlgili dil ve bölümle alakalı akademik yardm.</p>
@@ -91,6 +162,7 @@
             <li>Alan öğrencileri ile güvenilir iş birliği.</li>
           </ul>
         </article>
+
         <article class="svc">
           <header><span class="tag">03</span><h3>Teknik</h3></header>
           <p>Arayüz metinleri, kılavuzlar, ürün veri sayfaları, destek içerikleri.</p>
@@ -100,6 +172,7 @@
             <li>UI string bağlam notları</li>
           </ul>
         </article>
+
         <article class="svc">
           <header><span class="tag">04</span><h3>Web & Yerelleştirme</h3></header>
           <p>SEO odaklı içerik, mikro kopya, çağrı metinleri; FR/EN ⇄ TR doğal anlatım.</p>
@@ -109,6 +182,7 @@
             <li>A/B test önerileri</li>
           </ul>
         </article>
+
         <article class="svc svc--highlight">
           <header><span class="tag">05</span><h3>Redaksiyon & Düzeltme</h3></header>
           <p>Var olan çevirilerin akıcılık, doğruluk, tutarlılık ve yazım denetimi.</p>
@@ -118,6 +192,7 @@
             <li>Terminoloji haritası</li>
           </ul>
         </article>
+
         <article class="svc">
           <header><span class="tag">06</span><h3>Danışmanlık</h3></header>
           <p>Yayın, tez ve başvuru metinleri için dilsel strateji & son okuma.</p>
@@ -161,24 +236,29 @@ Kelimeleri değil, metnin bütün ruhuna karşı dile adilce taşımayı görev 
       </header>
 
       <div class="contact">
-
         <!-- FORM REMOVED -->
 
         <aside class="mini-cards">
           <div class="mini">
             <h4>İletişim</h4>
-            <p><a href="mailto:info@glottistranslate.com">info@glottistranslate.com</a><br>+90 534 038 83 90</p>
+            <p>
+              <a href="mailto:info@glottistranslate.com">info@glottistranslate.com</a><br>
+              <a href="tel:+905340388390" aria-label="Telefonla ara">+90 534 038 83 90</a>
+            </p>
           </div>
+
           <div class="mini">
             <h4>Müsaitlik</h4>
             <p>Yeni proje başlangıcı: <strong>~1 hafta</strong></p>
           </div>
+
           <div class="mini">
             <h4>Sosyal</h4>
-            <p><a href="https://www.instagram.com/glottistranslate">Instagram</a></p>
+            <p>
+              <a href="https://www.instagram.com/glottistranslate" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </p>
           </div>
         </aside>
-
       </div>
     </section>
   </main>
@@ -190,12 +270,5 @@ Kelimeleri değil, metnin bütün ruhuna karşı dile adilce taşımayı görev 
       <a class="to-top" href="#home" aria-label="Yukarı dön">↑</a>
     </div>
   </footer>
-
 </body>
 </html>
-
-
-
-
-
-
